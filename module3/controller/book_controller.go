@@ -9,7 +9,7 @@ import (
 
 func GetAllBooks(c *gin.Context) {
 	c.JSON(200, gin.H{
-		"message": "select books",
+		"message": "get all books",
 		"books":   service.GetAllBooks(),
 	})
 }
@@ -25,7 +25,7 @@ func GetBookById(c *gin.Context) {
 		return
 	}
 	c.JSON(200, gin.H{
-		"message": "select book",
+		"message": "get book",
 		"book":    book,
 	})
 }
@@ -84,6 +84,6 @@ func DeleteBook(c *gin.Context) {
 		return
 	}
 	c.JSON(200, gin.H{
-		"message": "book deleted",
+		"message": "delete book",
 	})
 }

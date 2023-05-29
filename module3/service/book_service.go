@@ -27,7 +27,7 @@ func GetBook(bookID uint64) (entity.Book, error) {
 			return Books[i], nil
 		}
 	}
-	return entity.Book{}, errors.New("book do not exists")
+	return entity.Book{}, errors.New("book dont exist")
 }
 
 func UpdateBook(book entity.Book) (entity.Book, error) {
@@ -37,7 +37,7 @@ func UpdateBook(book entity.Book) (entity.Book, error) {
 			return book, nil
 		}
 	}
-	return book, errors.New("book do not exists")
+	return book, errors.New("book dont exist")
 }
 
 func DeleteBook(bookID uint64) error {
@@ -47,5 +47,5 @@ func DeleteBook(bookID uint64) error {
 			return nil
 		}
 	}
-	return errors.New("book do not exists")
+	return errors.New("book dont exist")
 }
